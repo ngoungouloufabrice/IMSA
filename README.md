@@ -1,36 +1,75 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🎓 IMSA - Plateforme de Gestion Académique
 
-## Getting Started
+![IMSA Logo](/public/imsa-logo-officiel.png)
 
-First, run the development server:
+Bienvenue sur le dépôt officiel de la plateforme web de l'**Institut de Management et des Sciences Appliquées (IMSA)**. Cette application moderne est conçue pour faciliter l'accès aux informations de l'institut et simplifier le processus de pré-inscription pour les nouveaux étudiants.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## ✨ Fonctionnalités Clés
+
+-   **🏠 Accueil Dynamique** : Présentation de l'institut, des statistiques et des différents établissements.
+-   **📝 Pré-inscription en Ligne** : Formulaire complet permettant aux futurs étudiants de soumettre leurs informations.
+-   **📄 Génération de PDF** : Système automatisé pour générer et télécharger instantanément des attestations de pré-inscription professionnelles.
+-   **📚 Catalogue de Formations** : Consultation des filières et spécialités disponibles (Licence & Master).
+-   **📱 Design Responsive & Premium** : Interface fluide et moderne adaptée à tous les types d'écrans (Desktop, Tablette, Mobile).
+-   **🎭 Animations Fluides** : Utilisation de `Motion` pour des transitions et des révélations de contenu élégantes.
+
+## 🛠️ Stack Technique
+
+L'application repose sur les technologies les plus modernes du Web :
+
+-   **Framework** : [Next.js 15+](https://nextjs.org/) (App Router)
+-   **Langage** : JavaScript (ES6+)
+-   **Styling** : [Tailwind CSS 4](https://tailwindcss.com/) & [Material UI (MUI)](https://mui.com/)
+-   **Animations** : [Motion](https://motion.dev/) (anciennement Framer Motion)
+-   **Génération PDF** : `@react-pdf/renderer` & `html2pdf.js`
+-   **Déploiement** : Prêt pour [Vercel](https://vercel.com/)
+
+## 🚀 Installation et Démarrage
+
+### Pré-requis
+
+-   Node.js (version 18 ou supérieure recommandée)
+-   npm ou yarn
+
+### Étapes d'installation
+
+1.  **Cloner le dépôt** :
+    ```bash
+    git clone https://github.com/ngoungouloufabrice/IMSA.git
+    cd imsa
+    ```
+
+2.  **Installer les dépendances** :
+    ```bash
+    npm install
+    ```
+
+3.  **Lancer le serveur de développement** :
+    ```bash
+    npm run dev
+    ```
+
+4.  **Accéder à l'application** :
+    Ouvrez votre navigateur sur [http://localhost:3000](http://localhost:3000).
+
+## 📂 Structure du Projet
+
+```text
+imsa/
+├── app/                # Application Next.js (App Router)
+│   ├── components/     # Composants UI réutilisables
+│   ├── pre-registration/ # Module de pré-inscription (Formulaire + PDF)
+│   ├── globals.css     # Styles globaux Tailwind
+│   └── layout.js       # Layout principal
+├── public/             # Assets statiques (Logos, Images, Cachets)
+├── data/               # Données statiques (Filières, Cours)
+└── next.config.mjs     # Configuration Next.js
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📝 Licence
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Ce projet est la propriété de l'**Institut de Management et des Sciences Appliquées (IMSA)**. Tous droits réservés.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+💻 Développé avec ❤️ pour l'excellence académique.

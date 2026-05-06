@@ -1,0 +1,97 @@
+"use client";
+
+import SchoolIcon from '@mui/icons-material/School';
+import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
+import { motion } from "motion/react";
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.3,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+      ease: [0.21, 0.47, 0.32, 0.98],
+    },
+  },
+};
+
+export default function HeroCourses() {
+  const title = "Nos Formations";
+
+  return (
+    <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      {/* Image d'arrière-plan avec superposition */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/img-hero-course.jpg')",
+          backgroundAttachment: "fixed"
+        }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-[var(--foreground)]" />
+      
+      {/* Contenu */}
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+      >
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+          {title.split(" ").map((word, i) => (
+            <motion.span
+              key={i}
+              variants={itemVariants}
+              className="inline-block mr-[0.25em] last:mr-0"
+            >
+              {word === "Formations" ? (
+                <span className="text-[var(--accent)]">{word}</span>
+              ) : (
+                word
+              )}
+            </motion.span>
+          ))}
+        </h1>
+        
+        <motion.p 
+          variants={itemVariants}
+          className="text-lg sm:text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed"
+        >
+          Découvrez nos filières d'excellence conçues pour répondre aux défis de demain. 
+          De la gestion aux sciences appliquées, forgez votre avenir avec l'IMSA.
+        </motion.p>
+      </motion.div>
+
+      {/* Indicateur de défilement */}
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ 
+          delay: 1.5, 
+          duration: 1,
+          repeat: Infinity,
+          repeatType: "reverse"
+        }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2"
+      >
+        <KeyboardDoubleArrowDownIcon sx={{ fontSize: 32, color: "white", opacity: 0.5 }} />
+      </motion.div>
+
+      {/* Flou décoratif */}
+      <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-[var(--primary)]/20 rounded-full blur-[100px] pointer-events-none" />
+      <div className="absolute -top-24 -right-24 w-96 h-96 bg-[var(--accent)]/20 rounded-full blur-[100px] pointer-events-none" />
+    </section>
+  );
+}
