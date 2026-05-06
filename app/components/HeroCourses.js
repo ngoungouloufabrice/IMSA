@@ -3,6 +3,7 @@
 import SchoolIcon from '@mui/icons-material/School';
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const containerVariants = {
   hidden: { opacity: 0 },

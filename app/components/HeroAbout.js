@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import KeyboardDoubleArrowDownIcon from '@mui/icons-material/KeyboardDoubleArrowDown';
 import { motion } from "motion/react";
+import Image from "next/image";
 
 const campusImages = [
   {
