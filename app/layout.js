@@ -2,6 +2,8 @@ import { sourceSans, playfair } from "./fonts";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import PageTransition from "./components/PageTransition";
+import { Suspense } from "react";
 
 export const metadata = {
   title: "IMSA – Institut de Management et des Sciences Appliquées | Ici, on apprend autrement",
@@ -32,6 +34,10 @@ export default function RootLayout({ children }) {
       suppressHydrationWarning
     >
       <body className="min-h-screen flex flex-col">
+        <Suspense fallback={null}>
+          <PageTransition />
+        </Suspense>
+        
         <div className="print:hidden">
           <Header />
         </div>
