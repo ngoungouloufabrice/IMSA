@@ -144,7 +144,7 @@ export default function App() {
               </label>
               <input
                 className={inputClass("nom")}
-                placeholder="Ex : NGOUNGOULOU YACOUBAH"
+                
                 value={nom}
                 onChange={(e) => {
                   setNom(e.target.value.toUpperCase());
@@ -161,7 +161,6 @@ export default function App() {
               </label>
               <input
                 className={inputClass("prenom")}
-                placeholder="Ex : Fabrice Junior"
                 value={prenom}
                 onChange={(e) => {
                   setPrenom(e.target.value);
@@ -241,7 +240,7 @@ export default function App() {
                   </label>
                   <input
                     className={inputClass("serieBac")}
-                    placeholder="Ex : Série D"
+                    placeholder="Ex : D"
                     value={serieBac}
                     onChange={(e) => setSerieBac(e.target.value)}
                   />
