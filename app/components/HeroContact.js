@@ -32,12 +32,13 @@ export default function HeroContact() {
   return (
     <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
       {/* Image d'arrière-plan */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/img-hero-contact.jpeg')",
-          backgroundAttachment: "fixed"
-        }}
+      <Image
+        src="/img-hero-contact.jpeg"
+        alt="Contact IMSA"
+        fill
+        className="object-cover object-center"
+        priority
+        sizes="100vw"
       />
 
       {/* Superpositions (Overlays) */}

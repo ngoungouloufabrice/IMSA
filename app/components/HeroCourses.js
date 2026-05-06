@@ -33,12 +33,13 @@ export default function HeroCourses() {
   return (
     <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
       {/* Image d'arrière-plan avec superposition */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: "url('/img-hero-course.jpg')",
-          backgroundAttachment: "fixed"
-        }}
+      <Image
+        src="/img-hero-course.jpg"
+        alt="Formations IMSA"
+        fill
+        className="object-cover object-center"
+        priority
+        sizes="100vw"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-[var(--foreground)]" />
       

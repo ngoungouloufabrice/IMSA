@@ -60,13 +60,18 @@ export default function HeroAbout() {
       {campusImages.map((item, index) => (
         <div
           key={item.url}
-          className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1500 ${index === currentIndex ? "opacity-100" : "opacity-0"
+          className={`absolute inset-0 transition-opacity duration-1500 ${index === currentIndex ? "opacity-100" : "opacity-0"
             }`}
-          style={{
-            backgroundImage: `url('${item.url}')`,
-            backgroundAttachment: "fixed"
-          }}
-        />
+        >
+          <Image
+            src={item.url}
+            alt={item.title}
+            fill
+            className="object-cover object-center"
+            priority={index === 0}
+            sizes="100vw"
+          />
+        </div>
       ))}
 
       {/* Superpositions (Overlays) */}

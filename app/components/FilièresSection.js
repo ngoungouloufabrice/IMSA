@@ -71,7 +71,7 @@ export default function FilièresSection() {
 
         <Link
           href={`/courses`}
-          className="flex items-center gap-2 text-base font-semibold text-[var(--primary)] group/link justify-end"
+          className="flex items-center gap-2 text-base font-semibold text-[var(--primary)] group/link justify-end mt-15"
         >
           Voir toutes les filières
           <ArrowForwardIcon
